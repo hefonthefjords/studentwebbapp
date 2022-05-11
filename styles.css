@@ -1,0 +1,534 @@
+﻿@font-face {
+    font-family: "Gibson";
+    src: url('./fonts/Gibson-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Nimbus";
+    src: url('./fonts/nimbusSanL-Reg.otf');
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/*body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: 12pt;
+    overflow: hidden;*/
+  /*  for ios*/
+ /*   min-height: -webkit-fill-available;*/
+/*}*/
+
+
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: 12pt;
+    overflow: hidden;
+    min-height: 100vh;
+    min-height: fill-available;
+    min-height: -webkit-fill-available;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: 12pt;
+    overflow: hidden;
+    height: fill-available;
+    height: -webkit-fill-available;
+}
+
+h1, h2, h3 {
+    font-family: Gibson;
+    color: #00305e;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: .2em auto;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+p {
+    font-family: Nimbus;
+    font-size: 1.4em;
+    color: #000000;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #e32991;
+        font-weight: bold;
+    }
+
+button {
+    background-color: #e32991;
+    border: none;
+    border-radius: 1em;
+    color: white;
+    padding: 2px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    font-family: Gibson;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #00305e;
+    }
+
+.newslinks {
+    border: solid 5px white;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.4);
+}
+    .newslinks:hover {
+        border-color:;
+        border: solid 5px #e32991;
+        box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.4);
+    }
+
+
+.radius {
+    border-radius: 25em;
+}
+
+td {
+   padding:0.5em;
+}
+
+
+
+
+input[type=text], input[type=email], input[type=password], textarea {
+    font-size: 2em;
+}
+
+input[type=file] {
+    font-size: 2em;
+}
+
+
+.flexboxlogin {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y:scroll;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.flexbox-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flexbox-header {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.flexbox-footer {
+    border-top: 1px solid black;
+    width: 100%;
+    resize: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-item {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+    flex-shrink: 5;
+}
+
+.loginlogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transform: scale(2,2);
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    font-family: Nimbus;
+}
+
+.pagecontent {
+    overflow-y: scroll;
+}
+
+.CreateNewUser {
+    display: none;
+    flex-direction: column;
+    width: fit-content;
+    padding: 3em;
+    border: 3px solid #00305e;
+    border-radius: 1em;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.error {
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+    font-size: 1.2em;
+    color: red;
+}
+
+.copy {
+    width: 100%;
+    height: 1.5em;
+    position: fixed;
+    bottom: 0em;
+    left: 0em;
+    font-size: 1em;
+    text-align: center;
+    font-family: Nimbus;
+    background-color: #00305e;
+    color: #e32991;
+}
+
+.spacer {
+    height: 2.5em;
+}
+
+
+.smallLogo {
+    margin: 1em;
+}
+
+.navitem {
+    margin: 0.5em auto;
+    justify-content: space-between;
+    
+    
+}
+
+
+
+.accountsvg {
+    fill: #e32991;
+}
+
+    .accountsvg:hover {
+        fill: #00305e;
+    }
+
+.homesvg {
+    fill: #e32991;
+}
+
+    .homesvg:hover {
+        fill: #00305e;
+    }
+
+.calendarsvg {
+    fill: #e32991;
+}
+
+    .calendarsvg:hover {
+        fill: #00305e;
+    }
+
+.timetablenav {
+    fill: #e23991;
+}
+
+    .timetablenav:hover {
+        fill: #00305e;
+    }
+
+.notesnav {
+    fill: #e32991;
+}
+
+    .notesnav:hover {
+        fill: #00305e;
+    }
+
+
+.title {
+    justify-self: flex-start;
+
+}
+
+.pagetitle {
+    background: #e32991;
+    width:100%;
+    
+}
+.arrow {
+    align-content:center;
+    border-radius: 25em;
+    
+    transform:translateY(-2em);
+   
+}
+
+  
+
+
+
+
+
+/*Calendar Stuff*/
+
+.calendar {
+    padding: 0.5em;
+    width: 36em;
+    min-height: 34em;
+    background-color: white;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.4);
+}
+
+
+.event{
+    text-align:start;
+    
+    width: 75vw;
+    border:dashed 1px #00305e;
+    border-radius: 2em;
+    padding: 0.5em;
+}
+
+.eventTable{
+    align-self:center;
+    padding:1em;
+    empty-cells:show;
+    
+}
+
+.delEvent{
+    cursor:pointer;
+}
+
+
+.month {
+    height: 8em;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1em;
+    text-align: center;
+}
+
+    .month i {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2em;
+    }
+
+    .month h1 {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin-bottom: .5em;
+    }
+
+    .month p {
+        font-size: 1.6em;
+    }
+
+.weekdays {
+    width: 100%;
+    height: 2em;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+    .weekdays div {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+        width: calc(35em / 7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+    
+    .days div {
+        font-size: 1em;
+        margin: auto;
+        width: calc(35em / 7);
+        height: 3.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.2s;
+    }
+
+        .days div:hover:not(.today) {
+            background-color: #949699;
+            border-radius: 5em;
+            cursor: pointer;
+        }
+
+.prevDay, .nextDay {
+    opacity: 0.5;
+}
+
+.today {
+    color: white;
+    background-color: #e32991;
+    border-radius: 5em;
+}
+
+.selected{
+    color: white;
+    
+    font-family:Gibson;
+    font-weight:bold;
+    background-color: #949699;
+    border-radius: 5em;
+}
+
+
+
+/*NOTES PAGE THINGS*/
+
+.del-button {
+    font-size: 0.8em;
+}
+
+.notes-container {
+    flex-basis: 20%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+
+
+ul.noteslist, li {
+    list-style: none;
+}
+
+ul.noteslist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-shrink: 1;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+    ul.noteslist li {
+        text-decoration: none;
+        color: #000;
+        background: #ffc;
+        display: block;
+        height: fit-content;
+        width: fit-content;
+        max-width: 25vw;
+        padding: 1em;
+        box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        transform: scale(0.5) rotate(-6deg);
+        transition: transform .2s ease-in-out;
+    }
+
+        ul.noteslist li:nth-child(even) {
+            transform: scale(0.5) rotate(4deg);
+            position: relative;
+            top: 5px;
+            background: #cfc;
+        }
+
+        ul.noteslist li:nth-child(3n) {
+            transform: scale(0.5) rotate(-3deg);
+            position: relative;
+            top: -5px;
+            background: #ccf;
+        }
+
+        ul.noteslist li:nth-child(5n) {
+            transform: scale(0.5) rotate(5deg);
+            position: relative;
+            top: -10px;
+        }
+
+        ul.noteslist li:hover, ul li:focus {
+            box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+            transform: scale(1.5);
+            position: sticky;
+            z-index: 5;
+        }
+
+    ul.noteslist li {
+        margin: unset;
+        overflow-wrap: break-word;
+    }
+
+
+span {
+    cursor: pointer;
+    font-family: Gibson;
+    color: #00305e;
+}
+
+    span:hover {
+        font-weight: bold;
+    }
+
+.timetableIMG {
+    max-width: 75vw;
+    max-height: 75vh;
+}
